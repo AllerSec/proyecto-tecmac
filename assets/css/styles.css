@@ -74,6 +74,7 @@ ul,ol{list-style:none}
 .header__logo:hover{box-shadow:0 12px 32px rgba(0,0,0,0.5),0 2px 8px rgba(0,0,0,0.3),0 0 0 1px rgba(230,57,70,0.35),0 0 24px rgba(230,57,70,0.18)}
 .header__logo:hover img{transform:scale(1.03)}
 .header.scrolled .header__logo{box-shadow:0 4px 14px rgba(0,0,0,0.25),0 0 0 1px rgba(15,23,42,0.06)}
+@media(max-width:1023px){.header__logo{padding:7px 14px;border-radius:4px;box-shadow:0 4px 14px rgba(0,0,0,0.35),0 1px 3px rgba(0,0,0,0.2),0 0 0 1px rgba(15,23,42,0.05)}.header__logo img{height:34px}.header.scrolled .header__logo{box-shadow:0 2px 8px rgba(0,0,0,0.25),0 0 0 1px rgba(15,23,42,0.05)}}
 .header.scrolled .header__nav a{text-shadow:none;color:var(--color-text-muted)}
 .header.scrolled .header__nav a:hover,.header.scrolled .header__nav a.active{color:var(--color-white)}
 .header.scrolled .header__nav a.active{color:var(--color-accent)}
