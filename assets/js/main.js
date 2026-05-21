@@ -550,22 +550,60 @@ function initApp() {
   const contactForm = document.querySelector('#contact-form');
   if (contactForm) {
     const FORM_URL = 'https://script.google.com/macros/s/AKfycbwREONHpINH6QEITYRrgjAgMyaw1PYdLJIpSjRKRio0Hh12qdW6puYkUeXjCeaz2b6P1Q/exec';
+    const formLoadTime = Date.now();
+    const MIN_FILL_SECONDS = 3;
+    const SPINNER_SVG = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>';
+
+    const looksLikeSpam = (d) => {
+      const blob = `${d.nombre} ${d.apellidos} ${d.mensaje}`;
+      if (/<script|function\s*\(|MailApp\.|ContentService|doPost|\.createTextOutput|onclick=|<iframe/i.test(blob)) return true;
+      if ((blob.match(/https?:\/\//gi) || []).length >= 2) return true;
+      if (/(.)\1{6,}/.test(blob)) return true;
+      const name = `${d.nombre}${d.apellidos}`;
+      if (name.length > 8 && /^[A-Za-z]+$/.test(name)) {
+        const transitions = name.split('').slice(1).filter((c, i) => {
+          const prev = name[i];
+          return (c === c.toUpperCase()) !== (prev === prev.toUpperCase());
+        }).length;
+        if (transitions / name.length > 0.45) return true;
+      }
+      return false;
+    };
+
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const btn = contactForm.querySelector('.contact-form__btn');
       const originalHTML = btn.innerHTML;
-      btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>';
-      btn.disabled = true;
+      const honeypot = contactForm.querySelector('[name="website"]');
+      const elapsed = (Date.now() - formLoadTime) / 1000;
       const data = {
-        nombre:    contactForm.querySelector('[name="nombre"]').value,
-        apellidos: contactForm.querySelector('[name="apellidos"]').value,
-        email:     contactForm.querySelector('[name="email"]').value,
-        telefono:  contactForm.querySelector('[name="telefono"]').value,
-        mensaje:   contactForm.querySelector('[name="mensaje"]').value
+        nombre:    contactForm.querySelector('[name="nombre"]').value.trim(),
+        apellidos: contactForm.querySelector('[name="apellidos"]').value.trim(),
+        email:     contactForm.querySelector('[name="email"]').value.trim(),
+        telefono:  contactForm.querySelector('[name="telefono"]').value.trim(),
+        mensaje:   contactForm.querySelector('[name="mensaje"]').value.trim(),
+        elapsed:   Math.round(elapsed),
+        token:     'tecmac-' + Math.floor(formLoadTime / 1000)
       };
+
+      const fakeSuccess = () => {
+        contactForm.reset();
+        btn.textContent = contactForm.dataset.success || 'Enviado';
+        setTimeout(() => { btn.innerHTML = originalHTML; btn.disabled = false; }, 3000);
+      };
+
+      if ((honeypot && honeypot.value) || elapsed < MIN_FILL_SECONDS || looksLikeSpam(data)) {
+        btn.disabled = true;
+        btn.innerHTML = SPINNER_SVG;
+        setTimeout(fakeSuccess, 800);
+        return;
+      }
+
+      btn.innerHTML = SPINNER_SVG;
+      btn.disabled = true;
       fetch(FORM_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
-        .then(() => { contactForm.reset(); btn.innerHTML = contactForm.dataset.success || 'Enviado'; setTimeout(() => { btn.innerHTML = originalHTML; btn.disabled = false; }, 3000); })
-        .catch(() => { btn.innerHTML = contactForm.dataset.error || 'Error'; btn.disabled = false; setTimeout(() => { btn.innerHTML = originalHTML; }, 3000); });
+        .then(() => { contactForm.reset(); btn.textContent = contactForm.dataset.success || 'Enviado'; setTimeout(() => { btn.innerHTML = originalHTML; btn.disabled = false; }, 3000); })
+        .catch(() => { btn.textContent = contactForm.dataset.error || 'Error'; btn.disabled = false; setTimeout(() => { btn.innerHTML = originalHTML; }, 3000); });
     });
   }
 
