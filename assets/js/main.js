@@ -553,7 +553,8 @@ function initApp() {
   // ── Contact Form ──
   const contactForm = document.querySelector('#contact-form');
   if (contactForm) {
-    const FORM_URL = 'https://script.google.com/macros/s/AKfycbwREONHpINH6QEITYRrgjAgMyaw1PYdLJIpSjRKRio0Hh12qdW6puYkUeXjCeaz2b6P1Q/exec';
+    const FORM_URL = 'https://api.web3forms.com/submit';
+    const FORM_KEY = 'f4a7bd76-1d17-46e5-b21a-b0445bd98c57';
     const formLoadTime = Date.now();
     const MIN_FILL_SECONDS = 3;
     const SPINNER_SVG = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>';
@@ -605,9 +606,27 @@ function initApp() {
 
       btn.innerHTML = SPINNER_SVG;
       btn.disabled = true;
-      fetch(FORM_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
-        .then(() => { contactForm.reset(); btn.textContent = contactForm.dataset.success || 'Enviado'; setTimeout(() => { btn.innerHTML = originalHTML; btn.disabled = false; }, 3000); })
-        .catch(() => { btn.textContent = contactForm.dataset.error || 'Error'; btn.disabled = false; setTimeout(() => { btn.innerHTML = originalHTML; }, 3000); });
+      const payload = {
+        access_key: FORM_KEY,
+        subject: `Nuevo contacto desde tecmac.es — ${data.nombre} ${data.apellidos}`.trim(),
+        from_name: `${data.nombre} ${data.apellidos}`.trim(),
+        replyto: data.email,
+        nombre: data.nombre,
+        apellidos: data.apellidos,
+        email: data.email,
+        telefono: data.telefono,
+        mensaje: data.mensaje,
+        botcheck: ''
+      };
+      const restoreBtn = () => { btn.innerHTML = originalHTML; btn.disabled = false; };
+      fetch(FORM_URL, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(payload) })
+        .then(r => r.json())
+        .then(res => {
+          if (res && res.success) { contactForm.reset(); btn.textContent = contactForm.dataset.success || 'Enviado'; }
+          else { btn.textContent = contactForm.dataset.error || 'Error'; }
+          setTimeout(restoreBtn, 3000);
+        })
+        .catch(() => { btn.textContent = contactForm.dataset.error || 'Error'; setTimeout(restoreBtn, 3000); });
     });
   }
 
