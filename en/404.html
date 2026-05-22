@@ -8,8 +8,20 @@
   <meta name="theme-color" content="#060a13">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <!-- TECMAC_OPTIMIZED_V1 -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="../assets/css/styles.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="../assets/css/styles.css"></noscript>
+  <style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.7;color:#e2e8f0;background:#060a13;overflow-x:hidden;min-height:100vh;margin:0}
+.page-loader{position:fixed;inset:0;z-index:10000;background:#060a13;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:24px}
+.page-loader__logo{width:80px;height:auto}
+.page-loader__bar{width:120px;height:2px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden}
+.page-loader__bar-inner{height:100%;width:0%;background:#e63946;border-radius:2px}
+.skip-to-content{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}</style>
+
   <script src="../assets/js/gsap.min.js" defer></script>
   <script src="../assets/js/ScrollTrigger.min.js" defer></script>
   <link rel="icon" href="../assets/images/home/favicon.png" type="image/png">
@@ -105,6 +117,7 @@
       border-radius: 2px;
     }
   </style>
+  <script src="../assets/js/main.js" defer></script>
 </head>
 <body>
 
@@ -237,9 +250,5 @@
       </div>
     </div>
   </div>
-
-  
-  
-  <script src="../assets/js/main.js"></script>
 </body>
 </html>

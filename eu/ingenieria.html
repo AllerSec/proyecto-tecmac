@@ -30,14 +30,27 @@
   <meta name="twitter:image" content="https://www.tecmac.es/assets/images/empresa/empresa.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <!-- TECMAC_OPTIMIZED_V1 -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="../assets/css/styles.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="../assets/css/styles.css"></noscript>
+  <style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.7;color:#e2e8f0;background:#060a13;overflow-x:hidden;min-height:100vh;margin:0}
+.page-loader{position:fixed;inset:0;z-index:10000;background:#060a13;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:24px}
+.page-loader__logo{width:80px;height:auto}
+.page-loader__bar{width:120px;height:2px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden}
+.page-loader__bar-inner{height:100%;width:0%;background:#e63946;border-radius:2px}
+.skip-to-content{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}</style>
+
   <script src="../assets/js/gsap.min.js" defer></script>
   <script src="../assets/js/ScrollTrigger.min.js" defer></script>
   <link rel="icon" href="../assets/images/home/favicon.png" type="image/png">
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Hasiera","item":"https://www.tecmac.es/"},{"@type":"ListItem","position":2,"name":"Ingeniaritza","item":"https://www.tecmac.es/eu/ingenieria.html"}]}
 </script>
+  <script src="../assets/js/main.js" defer></script>
 </head>
 <body>
 
@@ -87,7 +100,7 @@
   </nav>
 
   <section class="page-header">
-    <div class="page-header__bg" style="background-image: url('../assets/images/ingenieria/header_ingenieria.jpg')"></div>
+    <div class="page-header__bg" style="background-image: url('../assets/images/ingenieria/header_ingenieria.webp')"></div>
     <div class="page-header__content">
       <h1 class="page-header__title">Ingenieria</h1>
       <p class="page-header__breadcrumb"><a href="index.html">Hasiera</a> <span>/</span> Ingenieria</p>
@@ -103,7 +116,7 @@
             <p>3D diseinu eta simulazio erremintak erabiliz produktu sorta handia eskaintzeko moduan gaude beroan ijezteko sektorean.</p>
           </div>
           <div class="about-content__image reveal-right">
-            <img src="../assets/images/ingenieria/3d.jpg" alt="3D Diseinua - Tecmac" loading="lazy">
+            <picture><source srcset="../assets/images/ingenieria/3d.webp" type="image/webp"><img src="../assets/images/ingenieria/3d.jpg" alt="3D Diseinua - Tecmac" loading="lazy"></picture>
           </div>
         </div>
       </div>
@@ -136,13 +149,13 @@
             </ul>
             <div class="eng-category__preview">
               <div class="eng-category__preview-thumb">
-                <img src="../assets/images/ingenieria/utillaje/u1.jpg" alt="Tresneria - gida-arrastagileak" loading="lazy">
+                <picture><source srcset="../assets/images/ingenieria/utillaje/u1.webp" type="image/webp"><img src="../assets/images/ingenieria/utillaje/u1.jpg" alt="Tresneria - gida-arrastagileak" loading="lazy"></picture>
               </div>
               <div class="eng-category__preview-thumb">
-                <img src="../assets/images/ingenieria/utillaje/u5.jpg" alt="Tresneria - barroiak" loading="lazy">
+                <picture><source srcset="../assets/images/ingenieria/utillaje/u5.webp" type="image/webp"><img src="../assets/images/ingenieria/utillaje/u5.jpg" alt="Tresneria - barroiak" loading="lazy"></picture>
               </div>
               <div class="eng-category__preview-thumb">
-                <img src="../assets/images/ingenieria/utillaje/u10.jpg" alt="Tresneria - kanalak" loading="lazy">
+                <picture><source srcset="../assets/images/ingenieria/utillaje/u10.webp" type="image/webp"><img src="../assets/images/ingenieria/utillaje/u10.jpg" alt="Tresneria - kanalak" loading="lazy"></picture>
               </div>
             </div>
             <a href="galeria-utillaje.html" class="eng-category__btn">
@@ -167,13 +180,13 @@
             </ul>
             <div class="eng-category__preview">
               <div class="eng-category__preview-thumb">
-                <img src="../assets/images/ingenieria/transporte/t1.jpg" alt="Kate transferidorea" loading="lazy">
+                <picture><source srcset="../assets/images/ingenieria/transporte/t1.webp" type="image/webp"><img src="../assets/images/ingenieria/transporte/t1.jpg" alt="Kate transferidorea" loading="lazy"></picture>
               </div>
               <div class="eng-category__preview-thumb">
-                <img src="../assets/images/ingenieria/transporte/t4.jpg" alt="Errodilu bideak" loading="lazy">
+                <picture><source srcset="../assets/images/ingenieria/transporte/t4.webp" type="image/webp"><img src="../assets/images/ingenieria/transporte/t4.jpg" alt="Errodilu bideak" loading="lazy"></picture>
               </div>
               <div class="eng-category__preview-thumb">
-                <img src="../assets/images/ingenieria/transporte/t7.jpg" alt="Zentratzeko sistemak" loading="lazy">
+                <picture><source srcset="../assets/images/ingenieria/transporte/t7.webp" type="image/webp"><img src="../assets/images/ingenieria/transporte/t7.jpg" alt="Zentratzeko sistemak" loading="lazy"></picture>
               </div>
             </div>
             <a href="galeria-transporte.html" class="eng-category__btn">
@@ -192,13 +205,13 @@
             <p class="eng-category__text">Sistema de tratamiento de barras corrugadas, enfriaderos, empujadores, cizallas, cajas de laminación, reductoras, árboles de transmisión, cilindros, hidráulicos y neumáticos especiales, formadores de bucles, arrastradores, kick off, tableros elevadores, topes, topes abatibles, topes desplazables, cunas fijas y móviles, mesas de carga palanquilla...</p>
             <div class="eng-category__preview">
               <div class="eng-category__preview-thumb">
-                <img src="../assets/images/ingenieria/varios/v1.jpg" alt="Hozte-oheak" loading="lazy">
+                <picture><source srcset="../assets/images/ingenieria/varios/v1.webp" type="image/webp"><img src="../assets/images/ingenieria/varios/v1.jpg" alt="Hozte-oheak" loading="lazy"></picture>
               </div>
               <div class="eng-category__preview-thumb">
-                <img src="../assets/images/ingenieria/varios/v5.jpg" alt="Begizta-sortzaileak" loading="lazy">
+                <picture><source srcset="../assets/images/ingenieria/varios/v5.webp" type="image/webp"><img src="../assets/images/ingenieria/varios/v5.jpg" alt="Begizta-sortzaileak" loading="lazy"></picture>
               </div>
               <div class="eng-category__preview-thumb">
-                <img src="../assets/images/ingenieria/varios/v9.jpg" alt="Palanketarako karga-mahiak" loading="lazy">
+                <picture><source srcset="../assets/images/ingenieria/varios/v9.webp" type="image/webp"><img src="../assets/images/ingenieria/varios/v9.jpg" alt="Palanketarako karga-mahiak" loading="lazy"></picture>
               </div>
             </div>
             <a href="galeria-varios.html" class="eng-category__btn">
@@ -217,13 +230,13 @@
             <p class="eng-category__text">Giltza eskurako proiektuak garatzen ditugu, ingeniaritzatik hasi eta gure bezeroentzako soluzioaren fabrikazio eta ezarpeneraino.</p>
             <div class="eng-category__preview">
               <div class="eng-category__preview-thumb">
-                <img src="../assets/images/ingenieria/ingenieria.jpg" alt="Giltza eskurako ingeniaritza proiektuak" loading="lazy">
+                <picture><source srcset="../assets/images/ingenieria/ingenieria.webp" type="image/webp"><img src="../assets/images/ingenieria/ingenieria.jpg" alt="Giltza eskurako ingeniaritza proiektuak" loading="lazy"></picture>
               </div>
               <div class="eng-category__preview-thumb">
-                <img src="../assets/images/ingenieria/3d.jpg" alt="3D diseinu industrialak" loading="lazy">
+                <picture><source srcset="../assets/images/ingenieria/3d.webp" type="image/webp"><img src="../assets/images/ingenieria/3d.jpg" alt="3D diseinu industrialak" loading="lazy"></picture>
               </div>
               <div class="eng-category__preview-thumb">
-                <img src="../assets/images/ingenieria/utillaje/u20.jpg" alt="Industria fabrikazioa" loading="lazy">
+                <picture><source srcset="../assets/images/ingenieria/utillaje/u20.webp" type="image/webp"><img src="../assets/images/ingenieria/utillaje/u20.jpg" alt="Industria fabrikazioa" loading="lazy"></picture>
               </div>
             </div>
           </div>
@@ -278,9 +291,5 @@
       </div>
     </div>
   </div>
-
-  
-  
-  <script src="../assets/js/main.js"></script>
 </body>
 </html>

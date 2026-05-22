@@ -1,0 +1,7 @@
+node_modules/
+*.report.html
+*.report.json
+lighthouse-*.html
+lighthouse-*.json
+lh-*
+*.original

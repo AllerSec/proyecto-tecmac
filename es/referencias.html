@@ -30,14 +30,27 @@
   <meta name="twitter:image" content="https://www.tecmac.es/assets/images/empresa/empresa.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <!-- TECMAC_OPTIMIZED_V1 -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="../assets/css/styles.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="../assets/css/styles.css"></noscript>
+  <style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.7;color:#e2e8f0;background:#060a13;overflow-x:hidden;min-height:100vh;margin:0}
+.page-loader{position:fixed;inset:0;z-index:10000;background:#060a13;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:24px}
+.page-loader__logo{width:80px;height:auto}
+.page-loader__bar{width:120px;height:2px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden}
+.page-loader__bar-inner{height:100%;width:0%;background:#e63946;border-radius:2px}
+.skip-to-content{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}</style>
+
   <script src="../assets/js/gsap.min.js" defer></script>
   <script src="../assets/js/ScrollTrigger.min.js" defer></script>
   <link rel="icon" href="../assets/images/home/favicon.png" type="image/png">
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.tecmac.es/"},{"@type":"ListItem","position":2,"name":"Referencias","item":"https://www.tecmac.es/es/referencias.html"}]}
 </script>
+  <script src="../assets/js/main.js" defer></script>
 </head>
 <body>
 
@@ -87,7 +100,7 @@
   </nav>
 
   <section class="page-header">
-    <div class="page-header__bg" style="background-image: url('../assets/images/referencias/referencias.jpg')"></div>
+    <div class="page-header__bg" style="background-image: url('../assets/images/referencias/referencias.webp')"></div>
     <div class="page-header__content">
       <h1 class="page-header__title">Referencias en la Industria Siderúrgica</h1>
       <p class="page-header__breadcrumb"><a href="../index.html">Inicio</a> <span>/</span> Referencias</p>
@@ -104,22 +117,22 @@
         </div>
         <div class="references-grid">
           <a href="https://corporate.arcelormittal.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-1"><img src="../assets/images/referencias/arcelor.png" alt="ArcelorMittal" loading="lazy"></a>
-          <a href="https://www.celsagroup.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-2"><img src="../assets/images/referencias/celsa.png" alt="Celsa" loading="lazy"></a>
-          <a href="https://www2.gerdau.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-3"><img src="../assets/images/referencias/gerdau.png" alt="Gerdau" loading="lazy"></a>
-          <a href="https://www.acerinox.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-4"><img src="../assets/images/referencias/acerinox.png" alt="Acerinox" loading="lazy"></a>
-          <a href="https://www.olarra.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-5"><img src="../assets/images/referencias/olarra.png" alt="Aceros Inoxidables Olarra" loading="lazy"></a>
-          <a href="https://www.tubacex.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-1"><img src="../assets/images/referencias/tubacex.png" alt="Tubacex" loading="lazy"></a>
-          <a href="https://www.aulasa.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-2"><img src="../assets/images/referencias/aulasa.png" alt="Aulasa" loading="lazy"></a>
-          <a href="https://www.megasa.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-3"><img src="../assets/images/referencias/megasider.png" alt="Megasider" loading="lazy"></a>
+          <a href="https://www.celsagroup.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-2"><picture><source srcset="../assets/images/referencias/celsa.webp" type="image/webp"><img src="../assets/images/referencias/celsa.png" alt="Celsa" loading="lazy"></picture></a>
+          <a href="https://www2.gerdau.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-3"><picture><source srcset="../assets/images/referencias/gerdau.webp" type="image/webp"><img src="../assets/images/referencias/gerdau.png" alt="Gerdau" loading="lazy"></picture></a>
+          <a href="https://www.acerinox.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-4"><picture><source srcset="../assets/images/referencias/acerinox.webp" type="image/webp"><img src="../assets/images/referencias/acerinox.png" alt="Acerinox" loading="lazy"></picture></a>
+          <a href="https://www.olarra.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-5"><picture><source srcset="../assets/images/referencias/olarra.webp" type="image/webp"><img src="../assets/images/referencias/olarra.png" alt="Aceros Inoxidables Olarra" loading="lazy"></picture></a>
+          <a href="https://www.tubacex.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-1"><picture><source srcset="../assets/images/referencias/tubacex.webp" type="image/webp"><img src="../assets/images/referencias/tubacex.png" alt="Tubacex" loading="lazy"></picture></a>
+          <a href="https://www.aulasa.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-2"><picture><source srcset="../assets/images/referencias/aulasa.webp" type="image/webp"><img src="../assets/images/referencias/aulasa.png" alt="Aulasa" loading="lazy"></picture></a>
+          <a href="https://www.megasa.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-3"><picture><source srcset="../assets/images/referencias/megasider.webp" type="image/webp"><img src="../assets/images/referencias/megasider.png" alt="Megasider" loading="lazy"></picture></a>
           <a href="https://www.geka-group.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-4"><img src="../assets/images/referencias/geka.png" alt="Maquinaria Geka" loading="lazy"></a>
           <a href="https://www.cafmobility.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-5"><img src="../assets/images/referencias/caf.png" alt="CAF" loading="lazy"></a>
-          <a href="https://www.sidenor.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-1"><img src="../assets/images/referencias/sidenor.png" alt="Sidenor" loading="lazy"></a>
-          <a href="https://www.ingeteam.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-2"><img src="../assets/images/referencias/ingeteam.png" alt="Ingeteam" loading="lazy"></a>
+          <a href="https://www.sidenor.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-1"><picture><source srcset="../assets/images/referencias/sidenor.webp" type="image/webp"><img src="../assets/images/referencias/sidenor.png" alt="Sidenor" loading="lazy"></picture></a>
+          <a href="https://www.ingeteam.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-2"><picture><source srcset="../assets/images/referencias/ingeteam.webp" type="image/webp"><img src="../assets/images/referencias/ingeteam.png" alt="Ingeteam" loading="lazy"></picture></a>
           <a href="https://www.russula.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-3"><img src="../assets/images/referencias/russula.svg" alt="Russula" loading="lazy"></a>
-          <a href="https://alfonsogallardo.es" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-4"><img src="../assets/images/referencias/gallardo.png" alt="Gallardo" loading="lazy"></a>
-          <a href="https://rugui.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-5"><img src="../assets/images/referencias/rugui.png" alt="Grupo Rugui" loading="lazy"></a>
-          <a href="https://7-steeluk.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-1"><img src="../assets/images/referencias/7-steel.png" alt="7 Steel Manufacturing" loading="lazy"></a>
-          <a href="https://www.caveoautomotive.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-2"><img src="../assets/images/referencias/caveo.png" alt="Caveo" loading="lazy"></a>
+          <a href="https://alfonsogallardo.es" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-4"><picture><source srcset="../assets/images/referencias/gallardo.webp" type="image/webp"><img src="../assets/images/referencias/gallardo.png" alt="Gallardo" loading="lazy"></picture></a>
+          <a href="https://rugui.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-5"><picture><source srcset="../assets/images/referencias/rugui.webp" type="image/webp"><img src="../assets/images/referencias/rugui.png" alt="Grupo Rugui" loading="lazy"></picture></a>
+          <a href="https://7-steeluk.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-1"><picture><source srcset="../assets/images/referencias/7-steel.webp" type="image/webp"><img src="../assets/images/referencias/7-steel.png" alt="7 Steel Manufacturing" loading="lazy"></picture></a>
+          <a href="https://www.caveoautomotive.com" target="_blank" rel="noopener noreferrer" class="reference-item reference-item--white reveal stagger-2"><picture><source srcset="../assets/images/referencias/caveo.webp" type="image/webp"><img src="../assets/images/referencias/caveo.png" alt="Caveo" loading="lazy"></picture></a>
         </div>
       </div>
     </section>
@@ -170,9 +183,5 @@
       </div>
     </div>
   </div>
-
-  
-  
-  <script src="../assets/js/main.js"></script>
 </body>
 </html>

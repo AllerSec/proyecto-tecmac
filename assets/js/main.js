@@ -33,10 +33,14 @@ function initApp() {
     loaderDoneCallbacks = [];
   };
 
+  // Wait for fonts to be ready (or timeout) before hiding loader — prevents CLS from font swap
+  const fontsReady = (document.fonts && document.fonts.ready)
+    ? Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 1500))])
+    : Promise.resolve();
+
   if (loader) {
     if (sessionStorage.getItem('tecmac_loaded')) {
-      loader.remove();
-      resolveLoader();
+      fontsReady.then(() => { loader.remove(); resolveLoader(); });
     } else {
       const loaderLogo = loader.querySelector('.page-loader__logo');
       const loaderBar  = loader.querySelector('.page-loader__bar-inner');
