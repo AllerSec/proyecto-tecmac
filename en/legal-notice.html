@@ -30,11 +30,11 @@
   <meta name="twitter:title" content="Legal Notice - TECMAC">
   <meta name="twitter:description" content="Legal notice of TECMAC Ingeniería y Servicios Auxiliares de Laminación, S.L.">
   <meta name="twitter:image" content="https://www.tecmac.es/assets/images/empresa/empresa.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- TECMAC_OPTIMIZED_V1 -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap"></noscript>
+  <!-- TECMAC_OPTIMIZED_V3 -->
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/rajdhani-LDI2apCSOBg7S-QT7pa8FvOreec.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/bebasneue-JTUSjIg69CK48gW7PXoo9Wlhyw.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
   <link rel="preload" as="style" href="../assets/css/styles.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="../assets/css/styles.css"></noscript>
   <style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -44,9 +44,19 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:16px;line-
 .page-loader__logo{width:80px;height:auto}
 .page-loader__bar{width:120px;height:2px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden}
 .page-loader__bar-inner{height:100%;width:0%;background:#e63946;border-radius:2px}
-.skip-to-content{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}</style>
+.skip-to-content{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+/* Pre-animation states — applied via CSS so first paint matches GSAP initial state (no CLS). Uses transform+opacity only. */
+.hero__tagline,.hero__title,.hero__subtitle,.hero__cta,.hero__scroll,.page-header__title,.page-header__breadcrumb,.reveal,.reveal-left,.reveal-right,.reveal-scale{opacity:0;will-change:transform,opacity}
+.hero__tagline,.hero__subtitle,.hero__scroll,.page-header__breadcrumb,.reveal{transform:translate3d(0,30px,0)}
+.hero__title{transform:translate3d(0,50px,0)}
+.hero__cta{transform:translate3d(0,18px,0) scale(.97)}
+.reveal-left{transform:translate3d(-40px,0,0)}
+.reveal-right{transform:translate3d(40px,0,0)}
+.reveal-scale{transform:scale(.92)}
+@media (prefers-reduced-motion: reduce){.hero__tagline,.hero__title,.hero__subtitle,.hero__cta,.hero__scroll,.page-header__title,.page-header__breadcrumb,.reveal,.reveal-left,.reveal-right,.reveal-scale{opacity:1;transform:none}}</style>
 
-  <script src="../assets/js/gsap.min.js" defer></script>
+
+<script src="../assets/js/gsap.min.js" defer></script>
   <script src="../assets/js/ScrollTrigger.min.js" defer></script>
   <link rel="icon" href="../assets/images/home/favicon.png" type="image/png">
   <script src="../assets/js/main.js" defer></script>
