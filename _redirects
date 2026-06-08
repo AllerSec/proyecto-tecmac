@@ -1,0 +1,24 @@
+# Redirects para URLs antiguas de WordPress y rutas inexistentes
+
+# Subpáginas antiguas de WordPress (formato slug)
+/eu/ingenieria/pisaketa-paketatzea-eta-garraio-elementuen-lanak/ /eu/ingenieria.html 301
+/eu/ingenieria/pisaketa-paketatzea-eta-garraio-elementuen-lanak  /eu/ingenieria.html 301
+/eu/fabrikazioa/fabrikazio-lanak/                                /eu/fabrikazioa.html 301
+/eu/fabrikazioa/fabrikazio-lanak                                 /eu/fabrikazioa.html 301
+/fr/fabrication/travaux-accomplies-fabrication/                  /fr/fabrication.html 301
+/fr/fabrication/travaux-accomplies-fabrication                   /fr/fabrication.html 301
+/en/engineering/hot-rolling-mill-guide-equipment-works/          /en/engineering.html 301
+/en/engineering/hot-rolling-mill-guide-equipment-works           /en/engineering.html 301
+/en/engineering/conveying-weighing-and-packaging-elements-works/ /en/engineering.html 301
+/en/engineering/conveying-weighing-and-packaging-elements-works  /en/engineering.html 301
+
+# Entradas antiguas de WordPress
+/fabricacion/f35/       /es/fabricacion.html 301
+/fabricacion/f35/feed/  /es/fabricacion.html 301
+/fabricacion/f34/       /es/fabricacion.html 301
+
+# Doble barra en rutas (e.g. /en// /eu//)
+/en//  /en/index.html 301
+/eu//  /eu/index.html 301
+/fr//  /fr/index.html 301
+/es//  /              301
