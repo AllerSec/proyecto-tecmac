@@ -16,6 +16,25 @@
 /fabricacion/f35/       /es/fabricacion.html 301
 /fabricacion/f35/feed/  /es/fabricacion.html 301
 /fabricacion/f34/       /es/fabricacion.html 301
+/fabricacion/f8/        /es/fabricacion.html 301
+/fabricacion/trabajos-realizados-de-fabricacion/  /es/fabricacion.html 301
+
+# Secciones raíz antiguas de WordPress (sin prefijo de idioma)
+/empresa/                /es/empresa.html 301
+/empresa/empresa-2/      /es/empresa.html 301
+/ingenieria/             /es/ingenieria.html 301
+/ingenieria/trabajos-realizados-de-utillaje/  /es/ingenieria.html 301
+/ingenieria/trabajos-realizados-elementos-de-transporte-pesaje-y-empaquetado/  /es/ingenieria.html 301
+/referencias/            /es/referencias.html 301
+/referencias/caveo/      /es/referencias.html 301
+/referencias/caesa/      /es/referencias.html 301
+/contacto/               /es/contacto.html 301
+
+# Entradas antiguas de WordPress en otros idiomas
+/en/feed/                             /en/index.html 301
+/en/legal-warning/                    /en/legal-notice.html 301
+/en/manufacture/manufacture-works/    /en/manufacture.html 301
+/fr/ingenierie/travaux-accomplies-delements-de-transport-pesage-et-emballage/  /fr/ingenierie.html 301
 
 # Doble barra en rutas (e.g. /en// /eu//)
 /en//  /en/index.html 301
